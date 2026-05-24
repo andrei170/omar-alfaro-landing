@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Expand Mentorship | Omar Alfaro</title>
+<meta name="description" content="Get your first or next profitable real estate deal done in 90 days, coached by an investor who has flipped 170+ properties and sold thousands of homes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#003566;
+    --navy-2:#024a8f;
+    --ink-navy:#000814;
+    --blue:#1d6bb9;
+    --sky:#82D8F2;
+    --sky-dark:#3aa9d6;
+    --bg:#FFFFFF;
+    --bg-alt:#f4f8fc;
+    --ink:#15202b;
+    --muted:#5a6b7a;
+    --line:#dde6ef;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Outfit',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Montserrat','Segoe UI',Helvetica,Arial,sans-serif;font-weight:800;line-height:1.14;color:var(--navy);letter-spacing:-0.02em;}
+  h1{font-size:2.6rem;}
+  h2{font-size:2rem;}
+  h3{font-size:1.25rem;}
+  p{margin-bottom:1rem;}
+  a{text-decoration:none;color:inherit;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px;}
+  section{padding:76px 0;}
+
+  .btn{display:inline-block;background:var(--sky);color:#06223a;font-weight:800;font-size:1.04rem;padding:16px 34px;border-radius:8px;border:none;cursor:pointer;font-family:'Montserrat',sans-serif;letter-spacing:.01em;transition:transform .18s ease, box-shadow .18s ease, background .18s ease;box-shadow:0 6px 20px rgba(130,216,242,.4);}
+  .btn:hover{background:var(--sky-dark);color:#fff;transform:translateY(-2px);box-shadow:0 10px 28px rgba(58,169,214,.45);}
+  .btn-sm{padding:11px 22px;font-size:.93rem;}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;}
+  .nav-logo{height:30px;width:auto;}
+  .wordmark{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.15rem;letter-spacing:.04em;color:var(--navy);}
+
+  .hero{background:linear-gradient(160deg,var(--ink-navy) 0%,var(--navy) 70%,var(--navy-2) 100%);color:#fff;padding:86px 0 80px;}
+  .hero h1{color:#fff;max-width:18ch;}
+  .hero h1 .hl{color:var(--sky);}
+  .hero-sub{font-size:1.18rem;color:#bcd3e8;max-width:44ch;margin:22px 0 28px;}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;}
+  .trust-line{margin-top:24px;font-size:.95rem;color:#8fb4d6;font-weight:600;}
+  .hero-photo{border-radius:14px;overflow:hidden;aspect-ratio:4/5;border:1px solid rgba(255,255,255,.14);box-shadow:0 24px 60px rgba(0,0,0,.4);background:#022a52;}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;}
+
+  .cred{background:var(--bg-alt);padding:30px 0;border-bottom:1px solid var(--line);}
+  .cred-grid{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;}
+  .badge{background:#fff;border:1px solid var(--line);border-radius:30px;padding:10px 20px;font-weight:700;font-size:.9rem;color:var(--navy);}
+
+  .lead{font-size:1.16rem;color:var(--muted);max-width:60ch;}
+  .pain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px;}
+  .pain{background:var(--bg-alt);border-left:4px solid var(--sky);padding:20px 22px;border-radius:8px;font-weight:600;color:var(--navy);}
+
+  .alt{background:var(--bg-alt);}
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px 26px;transition:transform .2s ease, box-shadow .2s ease;}
+  .card:hover{transform:translateY(-5px);box-shadow:0 14px 32px rgba(0,53,102,.14);}
+  .pill-num{width:46px;height:46px;border-radius:12px;background:var(--navy);color:var(--sky);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.2rem;margin-bottom:16px;font-family:'Montserrat',sans-serif;}
+
+  .vsl-box{max-width:820px;margin:36px auto 0;aspect-ratio:16/9;border-radius:14px;background:linear-gradient(135deg,var(--ink-navy),var(--navy));display:flex;flex-direction:column;align-items:center;justify-content:center;color:#bcd3e8;border:1px solid rgba(255,255,255,.1);cursor:pointer;transition:transform .2s ease;}
+  .vsl-box:hover{transform:scale(1.01);}
+  .play{width:78px;height:78px;border-radius:50%;background:var(--sky);display:flex;align-items:center;justify-content:center;margin-bottom:18px;box-shadow:0 8px 24px rgba(130,216,242,.5);}
+  .play::after{content:"";border-left:24px solid #06223a;border-top:15px solid transparent;border-bottom:15px solid transparent;margin-left:6px;}
+  .vsl-label{font-weight:700;font-size:1.05rem;}
+
+  .stack{max-width:760px;margin:38px auto 0;}
+  .stack-item{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin-bottom:14px;}
+  .check{flex-shrink:0;width:30px;height:30px;border-radius:50%;background:var(--sky);display:flex;align-items:center;justify-content:center;color:#06223a;font-weight:800;margin-top:2px;}
+  .stack-item h3{font-size:1.08rem;margin-bottom:4px;}
+  .stack-item p{margin:0;color:var(--muted);font-size:.97rem;}
+
+  .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px;}
+  .test{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;}
+  .test p.quote{color:var(--ink);font-size:1.02rem;margin-bottom:16px;}
+  .test-meta strong{color:var(--navy);font-size:.95rem;}
+  .test-meta span{color:var(--muted);font-size:.85rem;display:block;}
+
+  .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center;}
+  .headshot{border-radius:14px;overflow:hidden;aspect-ratio:1/1;border:1px solid var(--line);box-shadow:0 16px 40px rgba(0,53,102,.16);}
+  .headshot img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;}
+
+  .apply{background:linear-gradient(160deg,var(--ink-navy) 0%,var(--navy) 100%);color:#fff;text-align:center;}
+  .apply h2{color:#fff;}
+  .apply p{color:#bcd3e8;max-width:54ch;margin:18px auto 28px;font-size:1.1rem;}
+  .apply-tag{display:inline-block;background:rgba(130,216,242,.16);border:1px solid var(--sky);color:var(--sky);font-weight:700;font-size:.83rem;padding:7px 16px;border-radius:30px;margin-bottom:20px;letter-spacing:.06em;text-transform:uppercase;}
+
+  .faq{max-width:780px;margin:34px auto 0;}
+  .q{border:1px solid var(--line);border-radius:12px;margin-bottom:12px;background:#fff;overflow:hidden;}
+  .q-head{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:20px 24px;font-weight:700;font-size:1.05rem;color:var(--navy);display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Montserrat',sans-serif;}
+  .q-icon{flex-shrink:0;font-size:1.4rem;color:var(--sky-dark);transition:transform .25s ease;font-weight:800;}
+  .q.open .q-icon{transform:rotate(45deg);}
+  .q-body{max-height:0;overflow:hidden;transition:max-height .3s ease;color:var(--muted);}
+  .q-body p{padding:0 24px 20px;margin:0;}
+
+  .final{text-align:center;background:var(--bg-alt);}
+  .final h2{max-width:20ch;margin:0 auto 16px;}
+
+  footer{background:var(--ink-navy);color:#9bb6cf;padding:40px 0;}
+  .foot-inner{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;}
+  .foot-nav{display:flex;gap:24px;flex-wrap:wrap;}
+  .foot-nav a{color:#9bb6cf;font-size:.92rem;transition:color .2s ease;}
+  .foot-nav a:hover{color:#fff;}
+  .copy{font-size:.85rem;color:#6a8aa8;margin-top:8px;width:100%;}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.show{opacity:1;transform:none;}
+  .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-weight:800;font-size:.82rem;color:var(--sky-dark);margin-bottom:12px;font-family:'Montserrat',sans-serif;}
+  .center{text-align:center;}
+
+  @media(max-width:860px){
+    h1{font-size:2.05rem;}h2{font-size:1.55rem;}
+    .hero-grid{grid-template-columns:1fr;gap:32px;}
+    .hero-photo{max-width:330px;}
+    .pillars{grid-template-columns:1fr;}
+    .test-grid{grid-template-columns:1fr;}
+    .pain-grid{grid-template-columns:1fr;}
+    .about-grid{grid-template-columns:1fr;gap:28px;}
+    .headshot{max-width:320px;}
+    section{padding:56px 0;}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="wrap nav-inner">
+    <img class="nav-logo" src="https://cdn.prod.website-files.com/637e74411da2d428482096c9/671b296cc39f348ae0ab50d8_637e77dddbbfc42101b2673e_5f7c9ecbb8ce4c28f5f433ff_omarlogoblack-2.png" alt="Omar Alfaro" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span class=\'wordmark\'>OMAR ALFARO</span>');">
+    <a href="#apply" class="btn btn-sm">Apply Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Get your first real estate deal done in <span class="hl">90 days.</span></h1>
+      <p class="hero-sub">Stop watching reels and start closing. A 90-day mentorship to get you a profitable deal, coached by an investor who has flipped 170+ and sold thousands of homes.</p>
+      <a href="#apply" class="btn">Apply for the Mentorship</a>
+      <p class="trust-line">20+ years in real estate. Broker-owner. Host of the Expand podcast.</p>
+    </div>
+    <div class="hero-photo">
+      <img src="https://cdn.prod.website-files.com/637e74411da2d428482096c9/671f614094f5afc412ca56ad_EX-0012-G.jpg" alt="Omar Alfaro, Real Estate Investor" loading="eager">
+    </div>
+  </div>
+</header>
+
+<!-- CREDIBILITY BAR -->
+<div class="cred">
+  <div class="wrap cred-grid">
+    <span class="badge">20+ years in real estate</span>
+    <span class="badge">1,000s of homes sold</span>
+    <span class="badge">170+ properties flipped</span>
+    <span class="badge">61+ doors and counting</span>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow reveal">Let's be honest</p>
+    <h2 class="reveal">You've watched a hundred reels. You still haven't done a deal.</h2>
+    <p class="lead reveal">It's not because you don't know enough. You've consumed the content. It's because when it actually counts, you don't have anyone who has done this standing in your corner. So you freeze. Sound familiar?</p>
+    <div class="pain-grid">
+      <div class="pain reveal">You want to invest but you have no experience and you're scared of a bad deal.</div>
+      <div class="pain reveal">You don't know how to find a good deal, or how to tell a good number from a bad one.</div>
+      <div class="pain reveal">You think you need a pile of your own cash, so you never start.</div>
+      <div class="pain reveal">You're stuck in analysis, running the same numbers over and over and never pulling the trigger.</div>
+      <div class="pain reveal">You bought a course, watched some of it, and still haven't done anything with it.</div>
+      <div class="pain reveal">You're tired of just consuming. You want a real deal done, with someone in your corner.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow reveal center">The method</p>
+    <h2 class="reveal center">The Expand Method</h2>
+    <p class="lead reveal center" style="margin:14px auto 0;">Every deal comes down to three things. Most beginners only learn one. We coach you through all three.</p>
+    <div class="pillars">
+      <div class="card reveal">
+        <div class="pill-num">1</div>
+        <h3>Find the Deal</h3>
+        <p>Sourcing, deal analysis, and knowing a good number when you see it. We teach you to spot the deal instead of guessing.</p>
+      </div>
+      <div class="card reveal">
+        <div class="pill-num">2</div>
+        <h3>Fund the Deal</h3>
+        <p>Financing and creative structures so you can do the deal without needing a pile of your own cash. This is the piece nobody teaches.</p>
+      </div>
+      <div class="card reveal">
+        <div class="pill-num">3</div>
+        <h3>Close and Exit</h3>
+        <p>What to say, how to say it, and when to say it. The negotiation and the exit that lock in the profit. The part that actually pays.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VSL -->
+<section>
+  <div class="wrap">
+    <h2 class="reveal center">Watch this first</h2>
+    <div class="vsl-box reveal">
+      <div class="play"></div>
+      <div class="vsl-label">[VSL: Why you keep freezing on your first deal]</div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER STACK -->
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow reveal center">What you get</p>
+    <h2 class="reveal center">Inside the Mentorship</h2>
+    <p class="lead reveal center" style="margin:14px auto 0;">90 days, direct coaching, and the method that gets you a deal done.</p>
+    <div class="stack">
+      <div class="stack-item reveal"><div class="check">&#10003;</div><div><h3>90 days of direct coaching with Omar</h3><p>Group coaching and access. Bring your real deals and real numbers. Walk out with a plan and a move.</p></div></div>
+      <div class="stack-item reveal"><div class="check">&#10003;</div><div><h3>The full Expand Method curriculum</h3><p>Find, Fund, Close and Exit. Structured, in the order that works, not scattered across a hundred videos.</p></div></div>
+      <div class="stack-item reveal"><div class="check">&#10003;</div><div><h3>Weekly role-play and deal-review sessions</h3><p>Practice the negotiation and get your actual deals reviewed before you commit a dollar.</p></div></div>
+      <div class="stack-item reveal"><div class="check">&#10003;</div><div><h3>The RE Blitz course bundled in</h3><p>The full fundamentals course included, so you have the foundation and the coaching together.</p></div></div>
+      <div class="stack-item reveal"><div class="check">&#10003;</div><div><h3>Deal templates, scripts, and financing playbooks</h3><p>The deal-analysis tools, negotiation scripts, and funding structures, ready to use.</p></div></div>
+      <div class="stack-item reveal"><div class="check">&#10003;</div><div><h3>A circle of serious investors</h3><p>Not a beginner community. A room of people actually doing deals, sharing what's working.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow reveal center">What people say about Omar</p>
+    <h2 class="reveal center">Two decades of clients</h2>
+    <div class="test-grid">
+      <div class="test reveal">
+        <p class="quote">"He works hard for his clients. He makes sure his clients are happy and get what they want, every time."</p>
+        <div class="test-meta"><strong>Patti Garcia</strong><span>Client</span></div>
+      </div>
+      <div class="test reveal">
+        <p class="quote">"They were always available to answer questions. Professional, but they made you feel like family."</p>
+        <div class="test-meta"><strong>Michael Tamayo</strong><span>Client</span></div>
+      </div>
+      <div class="test reveal">
+        <p class="quote">"Highly recommended. Skilled and responsive."</p>
+        <div class="test-meta"><strong>Lauries Smith</strong><span>Client</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="alt">
+  <div class="wrap about-grid">
+    <div class="headshot reveal">
+      <img src="https://cdn.prod.website-files.com/637e74411da2d428482096c9/638529affd3acbef97a732de_IMG_4335.jpeg" alt="Omar Alfaro" loading="lazy">
+    </div>
+    <div>
+      <p class="eyebrow reveal">Who's Omar</p>
+      <h2 class="reveal">I bought my first home at 24.</h2>
+      <p class="reveal">Two decades later I've sold thousands of homes, flipped over 170 properties, and built a rental portfolio of 61+ doors and counting. I'm a broker and the owner of Monet Realty Group, and I've done this in every kind of market, the good ones and the recessions.</p>
+      <p class="reveal">I started teaching because people kept asking me the same thing: how do I actually do my first deal? The content answers the what. It can't answer your specific deal, your numbers, your situation. That's what the mentorship is for.</p>
+      <p class="reveal">I built this to put two decades of experience in your corner for 90 days, so you stop freezing and finally get a profitable deal done.</p>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY CTA -->
+<section class="apply" id="apply">
+  <div class="wrap">
+    <span class="apply-tag reveal">Application only</span>
+    <h2 class="reveal">This isn't for everyone.</h2>
+    <p class="reveal">I work directly with the people in this, so I'm picky about who gets in. If you're serious about doing a real deal and willing to do the work, apply and we'll get on a call to see if it's a fit. No pressure, no hard sell. Just two people talking real estate.</p>
+    <a href="#apply" class="btn reveal" onclick="alert('Application form goes here at launch.');return false;">Apply for the Mentorship</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow reveal center">Straight answers</p>
+    <h2 class="reveal center">Questions you're probably asking</h2>
+    <div class="faq">
+      <div class="q"><button class="q-head">I have zero experience. Is this for me?<span class="q-icon">+</span></button><div class="q-body"><p>Yes. That's exactly who it's built for. You don't need experience or a license to start. The whole method is designed to take a beginner from frozen to a first profitable deal, with me coaching you the whole way.</p></div></div>
+      <div class="q"><button class="q-head">I don't have a lot of capital.<span class="q-icon">+</span></button><div class="q-body"><p>Fund the Deal is a whole pillar of the method. There are creative structures and financing approaches that let you do deals without a big pile of your own cash. Most beginners freeze here because nobody teaches it. We do.</p></div></div>
+      <div class="q"><button class="q-head">How much is it?<span class="q-icon">+</span></button><div class="q-body"><p>It's application-based, and we talk about fit and investment on the call. It sits above my RE Blitz course because it's direct mentorship to a closed deal, not a self-serve course. Serious people only.</p></div></div>
+      <div class="q"><button class="q-head">How is this different from your course?<span class="q-icon">+</span></button><div class="q-body"><p>The course teaches you the fundamentals on your own time. The mentorship is where I coach you through doing it for real, on your actual deals, with accountability toward a closed deal in 90 days. The course is included.</p></div></div>
+      <div class="q"><button class="q-head">I've bought courses and never finished them.<span class="q-icon">+</span></button><div class="q-body"><p>So have a lot of people. That's the difference here. This is direct coaching, weekly deal reviews, and a room of people doing the work. You don't get to disappear into a video library. We keep you moving toward a deal.</p></div></div>
+      <div class="q"><button class="q-head">Does this work in this market?<span class="q-icon">+</span></button><div class="q-body"><p>I've done deals in every market for 20+ years, including recessions. Good deals exist in every market. The method is about finding and funding the right ones, not waiting for perfect conditions.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <h2 class="reveal">Stop watching. Start closing.</h2>
+    <p class="lead reveal center" style="margin:0 auto 28px;">You already want this. Now get a profitable deal done with two decades of experience in your corner.</p>
+    <a href="#apply" class="btn reveal">Apply for the Mentorship</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-inner">
+    <div class="wordmark" style="color:#fff;">OMAR ALFARO</div>
+    <div class="foot-nav">
+      <a href="#apply">Apply</a>
+      <a href="#">The Expand Podcast</a>
+      <a href="#">RE Blitz Course</a>
+      <a href="#">The Community</a>
+    </div>
+    <div class="copy">&copy; 2026 Omar Alfaro. Monet Realty Group. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); } });
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  document.querySelectorAll('.q-head').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var q = btn.parentElement;
+      var body = q.querySelector('.q-body');
+      var isOpen = q.classList.contains('open');
+      document.querySelectorAll('.q').forEach(function(other){
+        other.classList.remove('open');
+        other.querySelector('.q-body').style.maxHeight = null;
+      });
+      if(!isOpen){ q.classList.add('open'); body.style.maxHeight = body.scrollHeight + 'px'; }
+    });
+  });
+</script>
+</body>
+</html>
